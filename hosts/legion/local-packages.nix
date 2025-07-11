@@ -3,7 +3,5 @@
     kdePackages.kate
     neovim
     git
-    librewolf
-    home-manager
   ];
 }
