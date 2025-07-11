@@ -3,10 +3,8 @@
 
   inputs = {
 
-    nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos";
-      allowUnfree = true;
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos";
+
 
     home-manager = {
       url = "github:nix-community/home-manager";
