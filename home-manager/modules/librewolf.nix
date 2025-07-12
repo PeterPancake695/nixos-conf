@@ -3,18 +3,6 @@
     enable = true;
     package = pkgs.librewolf;
     policies = {
-      Cookies = {
-        "Allow" = [
-          "https://addy.io"
-          "https://element.io"
-          "https://discord.com"
-          "https://github.com"
-          "https://lemmy.cafe"
-          "https://proton.me"
-        ];
-        "Locked" = true;
-      };
-      DisableBuiltinPDFViewer = true;
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
       ExtensionSettings = {
@@ -48,6 +36,11 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/surfingkeys_ff/latest.xpi";
           installation_mode = "force_installed";
         };
+        # Ecosia
+        "{d04b0b40-3dab-4f0b-97a6-04ec3eddbfb0}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ecosia-the-green-search/latest.xpi";
+          installation_mode = "force_installed";
+        };
       };
       FirefoxHome = {
         "Search" = false;
@@ -72,4 +65,16 @@
       };
     };
   };
+
+  programs.librewolf = {
+    enable = true;
+    settings = {
+      "webgl.disabled" = false;
+      "privacy.resistFingerprinting" = false;
+      "privacy.clearOnShutdown.history" = false;
+      "privacy.clearOnShutdown.cookies" = false;
+      "network.cookie.lifetimePolicy" = 0;
+    };
+  };
+
 }
