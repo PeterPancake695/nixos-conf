@@ -5,7 +5,6 @@
     ./boot.nix
     ./home-manager.nix
     ./kernel.nix
-    ./firefox.nix
     ./network.nix
     ./nh.nix
     ./nix.nix
