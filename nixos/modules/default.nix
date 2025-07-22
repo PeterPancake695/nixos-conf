@@ -8,6 +8,7 @@
     ./network.nix
     ./nh.nix
     ./nix.nix
+    ./qmk.nix
     ./timezone.nix
     ./user.nix
     ./wm.nix

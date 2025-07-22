@@ -6,11 +6,6 @@
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
       ExtensionSettings = {
-        # Catpuccin Mocha - Lavender
-        "{8446b178-c865-4f5c-8ccc-1d7887811ae3}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-mocha-lavender-git/latest.xpi";
-          installation_mode = "force_installed";
-        };
         # uBlock Origin
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -24,11 +19,6 @@
         # Sponsor block
         "sponsorBlocker@ajay.app" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        # Tree style tab
-        "treestyletab@piro.sakura.ne.jp" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/tree-style-tab/latest.xpi";
           installation_mode = "force_installed";
         };
         # Surfing keys
@@ -65,16 +55,4 @@
       };
     };
   };
-
-  programs.librewolf = {
-    enable = true;
-    settings = {
-      "webgl.disabled" = false;
-      "privacy.resistFingerprinting" = false;
-      "privacy.clearOnShutdown.history" = false;
-      "privacy.clearOnShutdown.cookies" = false;
-      "network.cookie.lifetimePolicy" = 0;
-    };
-  };
-
 }
