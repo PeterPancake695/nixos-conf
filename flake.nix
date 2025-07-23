@@ -15,13 +15,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
+    nvf = {
+      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "25.05";
     user = "petrup";
@@ -55,6 +55,7 @@
       };
 
       modules = [
+        nvf.nixosModules.default
         ./home-manager/home.nix
       ];
     };

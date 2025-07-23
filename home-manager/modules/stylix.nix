@@ -18,13 +18,13 @@
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-
     targets = {
       neovim.enable = false;
       hyprland.enable = false;
       hyprlock.enable = false;
       starship.enable = false;
       kitty.enable = true;
+      firefox.profileNames = [ "default" ];
     };
 
     cursor = {

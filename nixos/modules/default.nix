@@ -3,6 +3,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot.nix
+    ./doas.nix
     ./home-manager.nix
     ./kernel.nix
     ./network.nix

@@ -7,5 +7,9 @@
     ./starship.nix
     ./stylix.nix
     ./kitty.nix
+    ./zathura.nix
+    ./lazygit.nix
+
+    ./nvf
   ];
 }
