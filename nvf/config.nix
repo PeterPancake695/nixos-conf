@@ -1,7 +1,5 @@
-{pkgs, lib, ... }:
-
 {
-  programs.nvf.settings = {
+  config.vim = {
     viAlias = true;
     vimAlias = true;
     debugMode = {
@@ -9,11 +7,12 @@
       level = 16;
       logFile = "/tmp/nvim.log";
     };
-
-    spellcheck = {
-      enable = true;
-      programmingWordlist.enable = true;
-    };
+    options.tabstop = 2;
+    options.softtabstop = 2;
+    options.shiftwidth = 2;
+    options.expandtab = true;
+    options.autoindent = true;
+    options.smartindent = true;
 
     autopairs.nvim-autopairs.enable = true;
 
@@ -79,18 +78,14 @@
       multicursors.enable = true;
       smart-splits.enable = true;
       undotree.enable = true;
-      motion = {
-        hop.enable = true;
-        leap.enable = true;
-        precognition.enable = true;
-      };
+
       images = {
         image-nvim.enable = false;
         img-clip.enable = true;
       };
     };
 
-     terminal = {
+    terminal = {
       toggleterm = {
         enable = true;
         lazygit.enable = true;

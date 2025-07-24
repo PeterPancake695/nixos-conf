@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -6,10 +6,10 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      vi = "nvim";
       tree = "ls --tree";
       cls = "clear";
       ".." = "cd ..";
+      rm = "rm -fr";
     };
 
     history.size = 10000;

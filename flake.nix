@@ -29,6 +29,11 @@
       { hostname = "legion"; stateVersion = "25.05"; }
     ];
 
+    customNeovim = nvf.lib.neovimConfiguration {
+      pkgs = nixpkgs.legacyPackages.${system};
+      modules = [ ./nvf ];
+    };
+
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
       system = system;
       specialArgs = {
@@ -55,8 +60,8 @@
       };
 
       modules = [
-        nvf.nixosModules.default
         ./home-manager/home.nix
+        {home.packages = [customNeovim.neovim];}
       ];
     };
   };

@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings = {
+  config.vim = {
     lsp = {
       enable = true;
 

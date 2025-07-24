@@ -1,5 +1,8 @@
 {
   imports = [
+    ./hyprland
+    ./swaync
+
     ./eza.nix
     ./git.nix
     ./librewolf.nix
@@ -9,7 +12,5 @@
     ./kitty.nix
     ./zathura.nix
     ./lazygit.nix
-
-    ./nvf
   ];
 }

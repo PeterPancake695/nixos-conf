@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings = {
+  config.vim = {
     theme = {
       enable = true;
       name = "catppuccin";
