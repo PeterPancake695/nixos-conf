@@ -4,6 +4,10 @@
     systemd.enable = true;
 
     settings = {
+      source = [
+        "/etc/hypr/hyprland.conf.d/monitors.conf"
+      ];
+
       env = [
         # Hint Electron apps to use Wayland
         "NIXOS_OZONE_WL,1"
@@ -15,15 +19,19 @@
       ];
 
       "$mainMod" = "SUPER";
-      "$terminal" = "alacritty";
+      "$terminal" = "kitty";
+
+      exec-once = [
+        "nm-applet"
+      ];
 
       general = {
-        gaps_in = 0;
-        gaps_out = 0;
+        gaps_in = 2;
+        gaps_out = 2;
 
         border_size = 2;
-        "col.active_border" = "rgba(d65d0eff) rgba(98961aff) 45deg";
-        "col.inactive_border" = "rgba(3c3836ff)";
+        "col.active_border" = "rgba(8839ef80) rgba(ea76cb80) 45deg";
+        "col.inactive_border" = "rgba(31324480)";
 
         resize_on_border = true;
 
@@ -32,18 +40,12 @@
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 5;
 
         active_opacity = 1.0;
         inactive_opacity = 1.0;
 
-        shadow = {
-          enabled = false;
-        };
-
-        blur = {
-          enabled = false;
-        };
+        shadow.enabled = false;
       };
 
       animations = {

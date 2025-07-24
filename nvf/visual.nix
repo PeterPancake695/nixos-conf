@@ -4,11 +4,11 @@
       enable = true;
       name = "catppuccin";
       style = "mocha";
-      transparent = false;
+      transparent = true;
     };
 
     statusline = {
-        lualine = {
+      lualine = {
         enable = true;
         theme = "catppuccin";
       };

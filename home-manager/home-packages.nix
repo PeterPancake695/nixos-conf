@@ -22,5 +22,7 @@
     brightnessctl
     bemoji
     playerctl
+    tofi
+    networkmanagerapplet
   ];
 }

@@ -1,5 +1,9 @@
-{ pkgs, inputs, ... }: {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [inputs.stylix.homeManagerModules.stylix];
 
   home.packages = with pkgs; [
     dejavu_fonts
@@ -24,11 +28,11 @@
       hyprlock.enable = false;
       starship.enable = false;
       kitty.enable = true;
-      firefox.profileNames = [ "default" ];
+      firefox.profileNames = ["default"];
     };
 
     cursor = {
-      name = "Bibata-Modern";
+      name = "Bibata-Modern-Classic";
       size = 24;
       package = pkgs.bibata-cursors;
     };
@@ -62,6 +66,11 @@
       package = pkgs.papirus-icon-theme;
       dark = "Papirus-Dark";
       light = "Papirus-Light";
+    };
+
+    image = pkgs.fetchurl {
+      url = "https://gitlab.com/dwt1/wallpapers/-/raw/master/0137.jpg";
+      sha256 = "0pdkwcz8gw74330kgs9qxlvn28q3x6mj9smbm9qmzcx887vxb4cv";
     };
   };
 }

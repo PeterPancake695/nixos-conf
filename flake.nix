@@ -2,7 +2,6 @@
   description = "My system configuration";
 
   inputs = {
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
@@ -21,37 +20,51 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: let
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     homeStateVersion = "25.05";
     user = "petrup";
     hosts = [
-      { hostname = "legion"; stateVersion = "25.05"; }
+      {
+        hostname = "legion";
+        stateVersion = "25.05";
+      }
     ];
 
     customNeovim = nvf.lib.neovimConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-      modules = [ ./nvf ];
+      modules = [./nvf];
     };
 
-    makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
-      system = system;
-      specialArgs = {
-        inherit inputs stateVersion hostname user;
+    makeSystem = {
+      hostname,
+      stateVersion,
+    }:
+      nixpkgs.lib.nixosSystem {
+        system = system;
+        specialArgs = {
+          inherit inputs stateVersion hostname user;
+        };
+
+        modules = [
+          ./hosts/${hostname}/configuration.nix
+        ];
       };
-
-      modules = [
-        ./hosts/${hostname}/configuration.nix
-      ];
-    };
-
   in {
     nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
-      configs // {
+      configs
+      // {
         "${host.hostname}" = makeSystem {
           inherit (host) hostname stateVersion;
         };
-      }) {} hosts;
+      }) {}
+    hosts;
 
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};

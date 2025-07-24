@@ -1,4 +1,8 @@
-{lib, inputs, ...} : {
+{
+  lib,
+  inputs,
+  ...
+}: {
   programs.kitty = lib.mkForce {
     enable = true;
     settings = {
@@ -8,7 +12,7 @@
       mouse_hide_wait = "-1.0";
       window_padding_width = 2;
       background_opacity = "0.7";
-      background_blur = 5;
+      background_blur = 7;
     };
   };
 }
