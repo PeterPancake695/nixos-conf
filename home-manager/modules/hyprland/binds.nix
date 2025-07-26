@@ -6,7 +6,7 @@
       "$mainMod SHIFT, Q, exit,"
       "$mainMod SHIFT, L, exec, loginctl lock-session"
       "$mainMod,       F, togglefloating,"
-      "$mainMod,       P, exec, tofi-drun | xargs hyprctl dispatch exec --"
+      "$mainMod,       P, exec, fuzzel"
       "$mainMod,       E, exec, bemoji -cn"
 
       # Moving focus

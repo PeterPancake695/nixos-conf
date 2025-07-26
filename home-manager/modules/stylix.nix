@@ -28,7 +28,7 @@
       hyprlock.enable = false;
       starship.enable = false;
       kitty.enable = true;
-      fuzzel.enable = true;
+      fuzzel.enable = false;
       zen-browser.enable = true;
       zen-browser.profileNames = ["default"];
     };
