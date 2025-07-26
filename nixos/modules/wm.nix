@@ -12,8 +12,7 @@
   security.pam.services.hyprlock = {};
 
   services = {
-    displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
+    displayManager.gdm.enable = true;
 
     libinput.enable = true;
 
