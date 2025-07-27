@@ -23,12 +23,6 @@
 
     snippets.luasnip.enable = true;
 
-    filetree = {
-      neo-tree = {
-        enable = true;
-      };
-    };
-
     tabline = {
       nvimBufferline.enable = true;
     };
@@ -71,7 +65,7 @@
       ccc.enable = false;
       vim-wakatime.enable = false;
       diffview-nvim.enable = true;
-      yanky-nvim.enable = false;
+      yanky-nvim.enable = true;
       icon-picker.enable = true;
       surround.enable = true;
       leetcode-nvim.enable = true;
