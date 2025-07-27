@@ -22,6 +22,7 @@
     bemoji
     playerctl
     pcmanfm
+    kdePackages.kate
     networkmanagerapplet
   ];
 }

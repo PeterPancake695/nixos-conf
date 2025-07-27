@@ -7,7 +7,6 @@
     ./home-manager.nix
     ./kernel.nix
     ./network.nix
-    ./nh.nix
     ./nix.nix
     ./qmk.nix
     ./timezone.nix

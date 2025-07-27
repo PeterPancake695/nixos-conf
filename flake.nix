@@ -1,5 +1,5 @@
 {
-  description = "My system configuration";
+  description = "My NixOS system configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -49,7 +49,7 @@
       }
     ];
 
-    customNeovim = nvf.lib.neovimConfiguration {
+    neovim = nvf.lib.neovimConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [./nvf];
     };
@@ -86,7 +86,7 @@
 
       modules = [
         ./home-manager/home.nix
-        {home.packages = [customNeovim.neovim];}
+        {home.packages = [neovim.neovim];}
         inputs.nixcord.homeModules.nixcord
       ];
     };
