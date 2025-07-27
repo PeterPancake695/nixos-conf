@@ -23,10 +23,6 @@
 
     snippets.luasnip.enable = true;
 
-    tabline = {
-      nvimBufferline.enable = true;
-    };
-
     treesitter.context.enable = true;
 
     binds = {
@@ -66,6 +62,7 @@
       vim-wakatime.enable = false;
       diffview-nvim.enable = true;
       yanky-nvim.enable = true;
+      yanky-nvim.setupOpts.ring.storage = "sqlite";
       icon-picker.enable = true;
       surround.enable = true;
       leetcode-nvim.enable = true;

@@ -1,4 +1,8 @@
-{ pkgs, user, ... }: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   programs.zsh.enable = true;
 
   users = {
@@ -6,9 +10,7 @@
     users.${user} = {
       isNormalUser = true;
       description = "Petru Paun";
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = ["wheel" "networkmanager"];
     };
   };
-
-  services.getty.autologinUser = user;
 }
