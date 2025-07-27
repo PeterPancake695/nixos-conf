@@ -2,27 +2,27 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    stremio
-    mpv
-    ripgrep
-    microfetch
-    wl-clipboard
-    zip
-    unzip
-    htop
-    imv
+    # In alphabetical order
+    bemoji
+    brightnessctl
     cliphist
     ffmpeg
     ffmpegthumbnailer
     fzf
-    yt-dlp
-    pavucontrol
+    htop
     hugo
-    brightnessctl
-    bemoji
-    playerctl
-    pcmanfm
-    kdePackages.kate
+    imv
+    microfetch
+    mpv
     networkmanagerapplet
+    pavucontrol
+    pcmanfm
+    playerctl
+    ripgrep
+    stremio
+    unzip
+    wl-clipboard
+    yt-dlp
+    zip
   ];
 }
