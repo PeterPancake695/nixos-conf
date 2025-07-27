@@ -21,6 +21,7 @@
     brightnessctl
     bemoji
     playerctl
+    pcmanfm
     networkmanagerapplet
   ];
 }
