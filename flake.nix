@@ -51,7 +51,7 @@
 
     neovim = nvf.lib.neovimConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-      modules = [./nvf];
+      modules = [./home-manager/modules/nvf];
     };
 
     makeSystem = {
