@@ -12,16 +12,6 @@
   services = {
     displayManager.gdm.enable = true;
     gnome.gnome-keyring.enable = true;
-
-    libinput.enable = true;
-
-    libinput.mouse = {
-      middleEmulation = true;
-    };
-
-    libinput.touchpad = {
-      middleEmulation = true;
-    };
   };
 
   security.pam.services.hyprlock = {};
