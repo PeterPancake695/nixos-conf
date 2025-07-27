@@ -13,5 +13,6 @@
     ./zathura.nix
     ./lazygit.nix
     ./fuzzel.nix
+    ./nixcord.nix
   ];
 }
