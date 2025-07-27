@@ -23,6 +23,11 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -31,6 +36,7 @@
     home-manager,
     nvf,
     zen-browser,
+    nixcord,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -81,6 +87,7 @@
       modules = [
         ./home-manager/home.nix
         {home.packages = [customNeovim.neovim];}
+        inputs.nixcord.homeModules.nixcord
       ];
     };
   };

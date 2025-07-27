@@ -3,7 +3,6 @@
 
   home.packages = with pkgs; [
     stremio
-    vesktop
     mpv
     ripgrep
     microfetch
