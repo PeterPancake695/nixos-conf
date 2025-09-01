@@ -14,8 +14,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf = {
-      url = "github:notashelf/nvf";
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -34,7 +34,7 @@
     self,
     nixpkgs,
     home-manager,
-    nvf,
+    nixvim,
     zen-browser,
     nixcord,
     ...
@@ -48,11 +48,6 @@
         stateVersion = "25.05";
       }
     ];
-
-    neovim = nvf.lib.neovimConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [./home-manager/modules/nvf];
-    };
 
     makeSystem = {
       hostname,
@@ -86,8 +81,8 @@
 
       modules = [
         ./home-manager/home.nix
-        {home.packages = [neovim.neovim];}
         inputs.nixcord.homeModules.nixcord
+        inputs.nixvim.homeModules.nixvim
       ];
     };
   };

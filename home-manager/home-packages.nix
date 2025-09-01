@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -24,5 +25,14 @@
     wl-clipboard
     yt-dlp
     zip
+
+    gcc
+    gnumake
+    binutils
+    glibc
+    stdenv.cc
+    android-tools
+    jdk
+    android-studio
   ];
 }
