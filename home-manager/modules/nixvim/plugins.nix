@@ -97,11 +97,6 @@
       };
     };
 
-    auto-save = {
-      enable = true;
-      autoLoad = true;
-    };
-
     hmts.enable = true;
     web-devicons.enable = true;
     nvim-autopairs.enable = true;
@@ -117,6 +112,6 @@
     trouble.enable = true;
     which-key.enable = true;
     smear-cursor.enable = true;
-    transparent.enable = false;
+    transparent.enable = true;
   };
 }
