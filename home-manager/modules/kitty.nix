@@ -1,8 +1,8 @@
 {
   lib,
-  inputs,
   ...
-}: {
+}:
+{
   programs.kitty = lib.mkForce {
     enable = true;
     settings = {
