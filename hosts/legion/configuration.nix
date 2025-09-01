@@ -4,14 +4,15 @@
   stateVersion,
   hostname,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./local-packages.nix
     ../../nixos/modules
   ];
 
-  environment.systemPackages = [pkgs.home-manager];
+  environment.systemPackages = [ pkgs.home-manager ];
 
   networking.hostName = hostname;
 
@@ -22,7 +23,7 @@
   hardware.graphics = {
     enable = true;
   };
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
@@ -31,6 +32,10 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+  boot.kernelParams = [
+    "nvidia_drm.modeset=1"
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+  ];
 
   # Monitor config for hyprland
   environment.etc."hypr/hyprland.conf.d/monitors.conf".text = ''

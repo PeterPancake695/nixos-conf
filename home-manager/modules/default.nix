@@ -1,6 +1,8 @@
 {
   imports = [
     ./hyprland
+    ./nixvim
+    ./eww
 
     ./swaync.nix
     ./eza.nix
