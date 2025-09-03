@@ -6,6 +6,7 @@
 
     ./swaync.nix
     ./eza.nix
+    ./gaming.nix
     ./git.nix
     ./zen-browser.nix
     ./zsh.nix
@@ -16,5 +17,6 @@
     ./lazygit.nix
     ./fuzzel.nix
     ./nixcord.nix
+    ./tmux.nix
   ];
 }

@@ -85,6 +85,9 @@
           "<C-r>" = "actions.refresh";
           "y." = "actions.copy_entry_path";
         };
+        view_options = {
+          show_hidden = true;
+        };
       };
     };
 

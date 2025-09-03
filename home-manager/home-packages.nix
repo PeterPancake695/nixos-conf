@@ -30,7 +30,6 @@
     wl-clipboard
     yt-dlp
     zip
-
     gcc
     gnumake
     binutils
@@ -41,6 +40,9 @@
     android-studio
     python3
     kicad-unstable
+    cmake
+    obs-studio
+    davinci-resolve
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

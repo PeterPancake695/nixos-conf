@@ -14,5 +14,8 @@
       background_opacity = "0.7";
       background_blur = 7;
     };
+    keybindings = {
+      "ctrl+f" = '' launch --type=overlay zsh -c 'dir=$(find . -type d | fzf) && [ -n "$dir" ] && tmux new-session -c "$dir" -s "$(basename "$dir")"' '';
+    };
   };
 }

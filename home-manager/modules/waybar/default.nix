@@ -6,7 +6,7 @@
       mainBar = {
         layer = "top";
         position = "left";
-        width = 30;
+        width = 40;
         margin = "5 5 5 5";
         modules-left = [
           "custom/notification"
@@ -58,11 +58,12 @@
             "2" = "󰖟";
             "3" = "";
             "4" = "";
-            "5" = "󱜠";
+            "5" = "";
+            "6" = "󱜠";
           };
 
           persistent-workspaces = {
-            "*" = 5;
+            "*" = 6;
           };
         };
         modules-right = [
