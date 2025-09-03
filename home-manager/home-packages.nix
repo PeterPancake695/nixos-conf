@@ -45,7 +45,7 @@
     davinci-resolve
     thunderbird
     fastfetch
-    satisfactorymodmanager
+    ficsit-cli
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
