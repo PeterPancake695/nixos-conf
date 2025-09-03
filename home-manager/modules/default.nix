@@ -2,7 +2,7 @@
   imports = [
     ./hyprland
     ./nixvim
-    ./eww
+    ./waybar
 
     ./swaync.nix
     ./eza.nix

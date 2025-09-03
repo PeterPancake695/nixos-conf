@@ -23,6 +23,8 @@
 
       exec-once = [
         "nm-applet"
+        "emote"
+        "waybar"
       ];
 
       general = {
@@ -53,8 +55,14 @@
       };
 
       input = {
-        kb_layout = "us,ro";
+        kb_layout = "us";
         kb_options = "grp:caps_toggle";
+
+        follow_mouse = 1;
+        sensitivity = 0;
+        touchpad = {
+          natural_scroll = false;
+        };
       };
 
       gestures = {

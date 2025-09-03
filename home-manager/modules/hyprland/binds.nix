@@ -2,12 +2,12 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod,       Return, exec, $terminal"
-      "$mainMod SHIFT, C, killactive,"
       "$mainMod SHIFT, Q, exit,"
       "$mainMod SHIFT, L, exec, loginctl lock-session"
+      "$mainMod,       E, exec, emote"
+      "$mainMod,       C, killactive,"
       "$mainMod,       F, togglefloating,"
       "$mainMod,       P, exec, fuzzel"
-      "$mainMod,       E, exec, bemoji -cn"
 
       # Moving focus
       "$mainMod, left, movefocus, l"

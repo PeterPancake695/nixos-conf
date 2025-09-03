@@ -4,21 +4,26 @@
 
   home.packages = with pkgs; [
     # In alphabetical order
-    bemoji
     brightnessctl
+    chntpw
     cliphist
+    emote
     ffmpeg
     ffmpegthumbnailer
     fzf
     htop
     hugo
     imv
+    krita
+    libreoffice
     microfetch
     mpv
     networkmanagerapplet
     pavucontrol
     pcmanfm
     playerctl
+    pulseaudio
+    qalculate-gtk
     ripgrep
     stremio
     unzip
@@ -34,5 +39,7 @@
     android-tools
     jdk
     android-studio
+    python3
+    kicad-unstable
   ];
 }

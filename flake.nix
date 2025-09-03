@@ -30,7 +30,7 @@
     };
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     home-manager,
@@ -38,7 +38,7 @@
     zen-browser,
     nixcord,
     ...
-  } @ inputs: let
+  }: let
     system = "x86_64-linux";
     homeStateVersion = "25.05";
     user = "petrup";
