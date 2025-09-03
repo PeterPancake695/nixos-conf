@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     mangohud
     protonup
+    protonup-qt
     lutris
     heroic
     bottles
