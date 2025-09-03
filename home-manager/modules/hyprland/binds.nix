@@ -8,7 +8,7 @@
       "$mainMod,       C, killactive,"
       "$mainMod,       F, togglefloating,"
       "$mainMod,       P, exec, fuzzel"
-      "        ,       Print, exec, hyprshot -m region"
+      "        ,       Print, exec, HYPRSHOT_DIR=\${HOME}/Pictures/Screenshots hyprshot -m region"
 
       # Moving focus
       "$mainMod, left, movefocus, l"
