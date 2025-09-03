@@ -8,6 +8,7 @@
       "$mainMod,       C, killactive,"
       "$mainMod,       F, togglefloating,"
       "$mainMod,       P, exec, fuzzel"
+      "        ,       Print, exec, hyprshot -m region"
 
       # Moving focus
       "$mainMod, left, movefocus, l"

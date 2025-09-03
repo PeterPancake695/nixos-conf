@@ -35,6 +35,19 @@
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
 
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "nvidia";
+    VDPAU_DRIVER = "nvidia";
+    XDG_SESSION_TYPE = "wayland";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    WLR_RENDERER_ALLOW_SOFTWARE = "1";
+    __GL_GSYNC_ALLOWED = "1";
+    __GL_VRR_ALLOWED = "0";
+    NVD_BACKEND = "direct";
+    NVD_GPU = "1";
+  };
+
   programs.hyprland = {
     xwayland.enable = true;
   };

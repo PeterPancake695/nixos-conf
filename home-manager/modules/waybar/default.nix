@@ -35,7 +35,7 @@
         "clock" = {
           interval = 1;
           format-alt = " 󰥔\n{:%H\n%M}";
-          format = " 󰣆\n{:%d\n%m\n%y\n 󰥔\n%I\n%M\n%S}";
+          format = " 󰣆\n{:%d\n%m\n%y\n 󰥔\n%H\n%M\n%S}";
           tooltip = true;
           tooltip-format = "{calendar}";
           calendar = {
