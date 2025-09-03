@@ -43,6 +43,8 @@
     cmake
     obs-studio
     davinci-resolve
+    thunderbird
+    fastfetch
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
