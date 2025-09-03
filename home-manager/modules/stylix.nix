@@ -2,8 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
-  imports = [inputs.stylix.homeManagerModules.stylix];
+}:
+{
+  imports = [ inputs.stylix.homeManagerModules.stylix ];
 
   home.packages = with pkgs; [
     dejavu_fonts
@@ -29,8 +30,9 @@
       starship.enable = false;
       kitty.enable = true;
       fuzzel.enable = false;
+      waybar.enable = false;
       zen-browser.enable = true;
-      zen-browser.profileNames = ["default"];
+      zen-browser.profileNames = [ "default" ];
     };
 
     cursor = {

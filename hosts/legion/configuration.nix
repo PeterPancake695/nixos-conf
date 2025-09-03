@@ -20,9 +20,7 @@
 
   # Nvidia bullshit
   services.xserver.enable = true;
-  hardware.graphics = {
-    enable = true;
-  };
+  hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
@@ -36,6 +34,10 @@
     "nvidia_drm.modeset=1"
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
+
+  programs.hyprland = {
+    xwayland.enable = true;
+  };
 
   # Monitor config for hyprland
   environment.etc."hypr/hyprland.conf.d/monitors.conf".text = ''

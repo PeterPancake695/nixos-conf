@@ -1,14 +1,13 @@
-{pkgs, ...}: {
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+{pkgs, ... }:
+{
+  programs.hyprland.enable = true;
 
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-hyprland];
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
   services.displayManager.gdm.enable = true;
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
+  hardware.opentabletdriver.enable = true;
 }

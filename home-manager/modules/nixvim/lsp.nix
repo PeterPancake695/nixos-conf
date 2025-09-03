@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.nixvim = {
     plugins = {
@@ -82,45 +83,8 @@
       };
     };
 
-    filetype = {
-      extension = {
-        yuck = "yuck";
-      };
-    };
-
-    # Custom LSP configuration for Yuck
-    extraConfigLua = ''
-      -- Set up Yuck filetype
-      vim.filetype.add({
-        extension = {
-          yuck = "yuck",
-        },
-      })
-
-      -- Configure LSP for Yuck files
-      local lspconfig = require('lspconfig')
-      local configs = require('lspconfig.configs')
-
-      -- Check if yuck_lsp is already defined
-      if not configs.yuck_lsp then
-        configs.yuck_lsp = {
-          default_config = {
-            cmd = { 'yuck', 'lsp' },
-            filetypes = { 'yuck' },
-            root_dir = lspconfig.util.root_pattern('.git', 'eww.yuck'),
-            single_file_support = true,
-            settings = {},
-          },
-          docs = {
-            description = 'Yuck language server for Eww configuration files',
-          },
-        }
-      end
-
-      -- Setup the LSP server with minimal configuration
-      lspconfig.yuck_lsp.setup({
-        capabilities = require('cmp_nvim_lsp').default_capabilities(),
-      })
-    '';
+    extraPlugins = with pkgs.vimPlugins; [
+      nvim-treesitter-parsers.yuck
+    ];
   };
 }
